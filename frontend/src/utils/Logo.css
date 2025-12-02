@@ -1,0 +1,17 @@
+.site-logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+
+  width: 130px;   /* ✅ AQUI CONTROLA O TAMANHO */
+  height: auto;
+
+  z-index: 999999;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.site-logo:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,232 @@
+/* ===== BACKGROUND GERAL ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2b8571, #b044b4, #be4e80);
+}
+
+/* ===== CONTAINER GERAL (o quadrão) ===== */
+.outer-container {
+  width: 95%;
+  height: 90%;
+  margin: 30px auto;
+
+  background: rgba(255,255,255,0.08);
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 0 20px rgba(0,0,0,0.35);
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.dashboard {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+
+  padding: 30px 20px;
+  margin: 40px 0;
+    margin-left: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* ===== PERFIL ===== */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+    padding-right: 8px;   /* evita que o email encoste na borda */
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: #ff68c2;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.meta .name {
+  font-size: 16px;
+  font-weight: 600;
+    word-break: break-word;  /* permite quebrar a linha */
+  overflow-wrap: break-word; /* fallback */
+}
+
+.meta .small {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ===== BOTÃO SAIR ===== */
+.btn-logout {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px 0;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid white;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-logout:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== MAIN ===== */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  padding-top: 60px;
+  overflow-y: auto;
+  color: white;
+}
+
+/* ===== CONTAINER DEFINIDO (caixa central) ===== */
+.container-box {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 40px;
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+
+/* ===== TÍTULO ===== */
+.container-box h2 {
+  margin-top: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+/* ===== FORM DE ADICIONAR TASK ===== */
+.add-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.add-form input,
+.add-form select {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid white;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  backdrop-filter: blur(4px);
+}
+
+.add-form input::placeholder {
+  color: #f7def7;
+}
+
+.add-form select {
+  max-width: 150px;
+}
+
+.add-form button {
+  padding: 12px 20px;
+  font-weight: bold;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  margin-top: 0; /* ALINHAMENTO CORRIGIDO */
+}
+
+.add-form button:hover {
+  background: #ff74b7;
+}
+
+/* ===== LISTA DE TASKS ===== */
+.tasks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 330px;
+  overflow-y: auto;
+  margin-top: 15px;
+}
+
+.tasks li {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.tasks li.done .title {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Checkbox + texto */
+.tasks li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botão deletar */
+.del {
+  background: rgba(255, 101, 151, 0.75);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.del:hover {
+  background: #ff3c9d;
+}
+.add-form select option {
+  background: #d34cc8;  /* fundo roxo visível */
+  color: white;         /* texto visível */
+}

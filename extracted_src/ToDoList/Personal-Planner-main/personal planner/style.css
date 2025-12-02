@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #EDB8B6, #B6C1BA, #366560);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+
+header {
+  width: 100%;
+  background-color: #366560;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-size: 25px;
+}
+
+main {
+  padding-top: 100px;
+}
+
+
+.logo img {
+  height: 150px;
+  width: auto;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #EDB8B6;
+}
+
+
+.container {
+  display: flex;
+  margin-top: 100px; 
+}
+
+
+.sidebar {
+  width: 250px;
+  height: calc(100vh - 100px); 
+  background-color: rgba(54, 101, 96, 0.9);
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 100px; 
+  left: 0;
+  overflow-y: auto; 
+  border-top-right-radius: 20px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #EDB8B6;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: all 0.3s;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.sidebar a:hover {
+  background-color: #EDB8B6;
+  color: #366560;
+  font-weight: bold;
+}
+
+.main-content {
+  margin-left: 270px; 
+  padding: 40px;
+}
+
+.main-content h1 {
+  font-size: 2.5em;
+  color: #366560;
+}
+
+.main-content p {
+  font-size: 1.3em;
+  line-height: 1.7em;
+  margin-top: 20px;
+  color: #f9f9f9;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* brilho leve */
+  background: rgba(54, 101, 96, 0.4); /* leve contraste do fundo */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(5px); 
+  transition: all 0.3s ease;
+}
+
+
+.main-content p:hover {
+  text-shadow: 0 0 15px rgba(237, 184, 182, 0.7);
+  transform: scale(1.01);
+}

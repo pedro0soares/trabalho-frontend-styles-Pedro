@@ -1,0 +1,200 @@
+/* ================== BASE ================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #266360, #ff7ab8, #266360, #ffbcd9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+  padding: 30px;
+  color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto 300px;
+  background-color: #efefef;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+input {
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ================== BOTÕES ================== */
+button {
+  background-color: #ff7ab8;
+  color: #FFF;
+  padding: 5px 10px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+  transform: scale(1);
+}
+
+button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* ================== TODO LIST ================== */
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #5555553f;
+}
+
+/* Cada tarefa */
+.todo {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding-right: 50px; /* espaço pros botões */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteúdo da tarefa */
+.todo-content {
+  flex: 1;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todo-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.todo-category {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Estado de tarefa concluída */
+.todo.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+/* ================== AÇÕES VERTICAIS ================== */
+.todo-actions-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: transparent;
+  padding: 5px 0;
+}
+
+/* Ícones (check e X) */
+.action-btn {
+  flex: 1;
+  width: 65%;
+  height: auto;
+  margin: 3px 0;
+  object-fit: contain;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0.25s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.action-btn:hover {
+  transform: scale(1.15);
+  filter: brightness(1.25);
+}
+
+/* ================== FORM ================== */
+.todo-form {
+  padding-bottom: 1.5rem;
+}
+
+input,
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  width: 100%;
+}
+
+/* ================== LOGO CANTO ================== */
+.corner-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: auto;
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.corner-image:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}

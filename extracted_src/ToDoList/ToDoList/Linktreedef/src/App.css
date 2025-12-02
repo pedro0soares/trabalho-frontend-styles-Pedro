@@ -1,0 +1,62 @@
+body {
+  background: linear-gradient(-45deg, #266360, #ff7ab8, #266360, #ffbcd9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 12s ease infinite;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  padding: 30px 20px;
+  text-align: center;
+
+  background: rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bio {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.link {
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.link:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.03);
+}

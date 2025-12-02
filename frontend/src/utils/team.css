@@ -1,0 +1,55 @@
+.team-page {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #21a57d, #5dada3, #ff4f9e);
+  color: white;
+  font-family: Poppins, sans-serif;
+
+  overflow: hidden;
+}
+
+.team-box {
+  width: 450px;
+  padding: 40px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.3);
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
+
+.team-box h1 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.links {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.links a {
+  background: rgba(255,255,255,0.2);
+  padding: 14px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.35);
+  transition: 0.25s;
+}
+
+.links a:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
