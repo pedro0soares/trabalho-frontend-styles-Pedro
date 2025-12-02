@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../img/Personal planner (4).png";
-import "../utils/logo.css";
+import "../utils/Logo.css";
 
 export default function Logo() {
   const navigate = useNavigate();
